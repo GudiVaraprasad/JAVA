@@ -1,0 +1,21 @@
+import java.util.*;
+class Clear_keyboard_buffer
+{
+public static void main(String[] args)
+{
+Scanner s=new Scanner(system.in);
+int i=s.nextInt();
+double d=s.nextDouble();
+s.nextLine(); //this is to clear the keyboard buffer
+String l=s.nextLine();
+s.close();
+System.out.println("String: " + l);
+System.out.println("Double: " + d);
+System.out.println("Int: " + i);
+}
+
+
+/*In this program we are reading an Integer in line 7 , after reading an Integer user press the Enter Key 
+but the scanner class keeps the Enter Key unread in the keyboard buffer same will happen in line 8 with nextDouble 
+and when its time to supply String to the nextLine(),, it will read the enter key from the user thinking that the user 
+has entered the enter key.(that's why we get empty output if we don’t use line 9).*/
