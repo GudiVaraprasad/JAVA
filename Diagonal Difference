@@ -1,0 +1,50 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+         int i=in.nextInt();
+        int j=in.nextInt();
+        int[][] a=new int[i][j];
+        for(i=0;i<a.length;i++)
+        {
+           for(j=0;j<a.length;j++)
+           {
+              a[i][j]=in.nextInt();  
+           }
+        }
+        int sum1=0;
+        for(i=0;i<a.length;i++)
+        {
+            for(j=0;j<a.length;j++)
+            {
+                if(i==j)
+                {
+                    sum1=sum1+a[i][j];
+                }
+            }
+        }
+        int sum2=0;
+        for(i=0;i<a.length;i++)
+        {
+            for(j=0;j<a.length;j++)
+            {
+                if(i==a.length-j-1)
+                {
+                    sum2=sum2+a[i][j];
+                }
+            }
+        }
+        if(sum1>sum2)
+        {
+          int sum=sum1-sum2;
+          System.out.println(sum);  
+        }
+        if(sum1<sum2)
+        {
+          int SUM=sum2-sum1;
+          System.out.println(SUM);  
+        }
+    }
+}
