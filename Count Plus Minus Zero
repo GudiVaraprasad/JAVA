@@ -1,0 +1,57 @@
+/* The first line contains an integer, n , denoting the size of the array.
+The second line contains n space-separated integers describing an array of numbers.
+
+You must print the following 3 lines:
+1. A decimal representing of the fraction of positive numbers in the array compared to its size.
+2. A decimal representing of the fraction of negative numbers in the array compared to its size.
+3. A decimal representing of the fraction of zeros in the array compared to its size. */
+
+
+
+import java.util.*;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        int n=in.nextInt();
+        int[] a=new int[n];
+        for(int i=0;i<a.length;i++)
+        {
+            a[i]=in.nextInt();
+        }
+        
+        float count_positive=0;
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]>0)
+            {
+            count_positive++;
+            }
+        }
+        float positive=count_positive/a.length;
+        System.out.println(positive);
+        
+        float count_negative=0;
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]<0)
+            {
+            count_negative++;
+            }
+        }
+         float negative=count_negative/a.length;
+        System.out.println(negative);
+     
+        float count_zero=0;
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]==0)
+            {
+            count_zero++;
+            }
+        }
+              float zero=count_zero/a.length;
+        System.out.println(zero);
+    }
+}
