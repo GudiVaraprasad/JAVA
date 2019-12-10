@@ -1,23 +1,33 @@
-// Average and Sum of elements in an array
+// Sum and Average of array elements
 
-import java.util.*;
-public class MyClass
+import java.util.Scanner;
+public class Main
 {
-    public static void main(String args[])
+    public static void main(String[] args) 
     {
-       long startTime = System.currentTimeMillis(); 
-       Scanner in=new Scanner(System.in);
-       int[] a={5,20,50,75,100};
-       int sum=0;
-       for(int i=0;i<a.length;i++)
-       {
-           sum=sum+a[i];
-       }
-       System.out.println("Sum of the elements in an array = " +sum);
-        double avg=sum/a.length;
-       System.out.println("Average value of the elements in an array = " +avg);
+        long startTime = System.currentTimeMillis();
+        
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter no. of elements of array:");
+        int n = in.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter all the elements:");
+        for(int i = 0; i < n ; i++)
+        {
+            a[i] = in.nextInt();
+        }
+        float sum=0;
+        for(int i = 0; i < n ; i++)
+        {
+            sum = sum + a[i];
+        }
+        System.out.println("Sum of array elements : "+sum);
+        float average = sum / n;
+        System.out.println("Average of array elements : "+average);
+        
         long endTime = System.currentTimeMillis();
         long totalTime = endTime - startTime;
+        System.out.println();
         System.out.println(totalTime);
     }
 }
