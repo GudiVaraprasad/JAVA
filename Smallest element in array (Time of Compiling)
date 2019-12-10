@@ -1,0 +1,35 @@
+// Smallest element in array
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter no. of elements of array:");
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        System.out.println("Enter all the elements:");
+        for(int i = 0; i < n ; i++)
+        {
+            arr[i] = in.nextInt();
+        }
+        for (int i = 0; i < arr.length; i++) 
+        {
+          for (int j = i + 1; j < arr.length; j++) 
+          {
+            int tmp = 0;
+            if (arr[i] > arr[j])
+            {
+                tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+          }
+        }
+        System.out.println("Smallest element in an array is " +arr[0]);
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println();
+        System.out.println("The time taken to compile is " +totalTime);
+    }
+}
