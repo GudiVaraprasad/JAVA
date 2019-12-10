@@ -1,0 +1,30 @@
+// Searching an element in an array
+
+import java.util.*;
+public class MyClass
+{
+    public static void main(String args[])
+    {
+       long startTime = System.currentTimeMillis(); 
+       Scanner in=new Scanner(System.in);
+       int[] a={5,20,50,75,100};
+       int n=in.nextInt();
+       int temp=0;
+       for(int i=0;i<a.length;i++)
+       {
+          if(a[i]==n)
+          {
+              System.out.println("element found at index "+i);
+              temp=temp+1;
+          }
+       }
+         if(temp==0)
+         {
+         System.out.println("Element not found");
+         }
+       
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime);
+    }
+}
