@@ -1,0 +1,19 @@
+// Time of Compilation Syntax
+
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+       long startTime = System.currentTimeMillis(); 
+       
+                  // 
+                  // YOUR BLOCK OF CODE
+                  // 
+                  //
+                  
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime);
+    }
+}
