@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main
+{
+   public static void main(String[] args)
+   {
+       Scanner in=new Scanner(System.in);
+      int[][] Jagged_Array = new int[2][];    // assuming 2 rows
+      System.out.print("Enter no. of columns to be there in row 1: ");
+      int p=in.nextInt();
+      System.out.print("Enter no. of columns to be there in row 2: ");
+      int q=in.nextInt();
+      Jagged_Array[0] = new int[p];         //first row has p columns
+      Jagged_Array[1] = new int[q];        //second row has q columns
+
+      int count = 0;
+      //initializing array
+      for(int row=0; row < Jagged_Array.length; row++)
+      {
+         for(int column=0; column < Jagged_Array[row].length; column++)
+         {
+            Jagged_Array[row][column] = count++;
+         }    
+      }
+      
+        System.out.println("My created Jagged Array is: ");
+      for(int row=0; row < Jagged_Array.length; row++)
+      {
+         System.out.println();
+         for(int column=0; column < Jagged_Array[row].length; column++)
+         {
+            System.out.print(Jagged_Array[row][column] + " ");
+         }    
+      }
+   }   
+}
