@@ -1,0 +1,47 @@
+/* Write a user defined method, DiagonlSum(), which 2D- array as argument and returns sum
+of the diagonal elements of a square matrix. Write the complete program to test that user
+defined method. */
+
+
+import java.util.*;
+public class Main 
+{
+    public static int DiagonlSum(int[][] array,int M,int N)
+    {
+        int sum=0;
+        for(int i=0;i<M;i++)
+        {  
+            for(int j=0;j<N;j++)
+            {
+               if(i==j)
+               {
+                   sum=sum+array[i][j];  
+               }
+               else
+               continue;
+            }
+        }
+        return sum;
+    }
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter no. of rows: ");
+        int m=in.nextInt();
+        System.out.println("Enter no. of coloumns: ");
+        int n=in.nextInt();
+        System.out.println("Enter the array elements: ");
+        int[][] myArray=new int[m][n];
+        for(int i=0;i<n;i++)
+        {  
+            for(int j=0;j<n;j++)
+            {
+              myArray[i][j]=in.nextInt();
+            }
+        }
+    
+        Main obj=new Main();
+        System.out.println("Sum of the diagonal elements of the array is: " +obj.DiagonlSum(myArray,m,n));
+        
+    }
+}
