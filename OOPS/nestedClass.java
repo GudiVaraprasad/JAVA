@@ -1,4 +1,5 @@
 
+// Perfect example for nested classes, objects methods.
 
 import java.util.*;
 class C{
