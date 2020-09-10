@@ -32,6 +32,15 @@ class Test
 
 /* Output :
 
+ System.out.println(e) --------> java.lang.ArithmeticException: / by zero
+------------------------------------------------------------------------
+ System.out.println(e.toString()) --------> java.lang.ArithmeticException: / by zero
+------------------------------------------------------------------------
+ e.printStackTrace() -------->
+java.lang.ArithmeticException: / by zero
+        at Test.main(Test.java:12)
+------------------------------------------------------------------------
+ System.out.println(e.getMessage()) --------> / by zero
 
 
 */
