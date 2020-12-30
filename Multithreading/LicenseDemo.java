@@ -1,6 +1,8 @@
 import java.util.*;
 import java.lang.*;
 
+// Mini Project
+
 class MedicalTest extends Thread
 {
 	@Override
